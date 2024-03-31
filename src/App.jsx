@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 export default function App() {
   const [num1, setNum1] = useState("");
@@ -75,6 +76,10 @@ export default function App() {
     </>
   );
 }
+Input.propTypes = {
+  value: PropTypes.string,
+  handleClearForm: PropTypes.func,
+};
 
 function Input({ value, handleClearForm }) {
   return (
